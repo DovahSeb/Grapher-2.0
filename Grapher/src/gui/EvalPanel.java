@@ -13,6 +13,7 @@ public class EvalPanel extends JPanel {
 	
 	public EvalPanel(){
 		this.setBackground(Color.gray);
+		this.setPreferredSize(new Dimension(0,40));
 		this.setLayout(new GridLayout(1,3));
 		this.add(eval = new JLabel());
 		this.add(function = new JTextField());
@@ -22,10 +23,6 @@ public class EvalPanel extends JPanel {
 	
 	public void afficheEval() {
 		eval.setText("Entrer votre fonction f(x) : ");
-	}
-	
-	public void afficheText() {
-		function = new JTextField(10);
 	}
 	
 	public void afficheTracer() {

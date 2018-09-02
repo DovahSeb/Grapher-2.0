@@ -1,6 +1,7 @@
 package gui;
 
 import javax.swing.JFrame;
+import java.awt.*;
 
 public class GraphView extends JFrame{
 	
@@ -9,27 +10,41 @@ public class GraphView extends JFrame{
 	//Variables
 	public PositionPanel positionpanel;
 	public EvalPanel evalpanel;
+	public ActionPanel actionpanel;
+	public Grille grille;
 	
 	public GraphView() {
-		
+			
 		setTitle("Grapher");
-		setSize(800, 800);
+		setSize(new Dimension(800, 800));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
 		
 		//Position Panel
-		PositionPanel positionpanel;
+		//PositionPanel positionpanel;
 		this.getContentPane().add(positionpanel = new PositionPanel(), "North");
-		positionpanel.afficheCoord(0, 0);
-		positionpanel.afficheFunc(0);
-		
+
 		//Eval Panel
 		EvalPanel evalpanel;
 		this.getContentPane().add(evalpanel = new EvalPanel(), "South");
 		evalpanel.afficheEval();
-		evalpanel.afficheText();
+		//evalpanel.afficheText();
 		evalpanel.afficheTracer();
 		
-		setVisible(true);
+		//Action Panel
+		ActionPanel actionpanel;
+		this.getContentPane().add(actionpanel = new ActionPanel(), "West");
+		actionpanel.affichexmin();
+		actionpanel.affichexmax();
+		actionpanel.afficheymin();
+		actionpanel.afficheymax();
+		actionpanel.afficheZoomp();
+		actionpanel.afficheZoomn();
+		actionpanel.affciherefresh();
 		
+		//Grille
+		//Grille grille;
+		this.getContentPane().add(grille = new Grille(), "Center");
 		
 	}
 }
