@@ -6,6 +6,8 @@ import java.awt.*;
 public class GraphView extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
+
+	//private static final LayoutManager JPanel = null;
 	
 	//Variables
 	public PositionPanel positionpanel;
@@ -17,14 +19,12 @@ public class GraphView extends JFrame{
 	public GraphView() {
 			
 		setTitle("Grapher");
-		setSize(new Dimension(800, 800));
+		setPreferredSize(new Dimension(900, 900));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pack();
+		setLocationRelativeTo(null);
 		setVisible(true);
 		
-		//Position Panel
-		//PositionPanel positionpanel;
-		this.getContentPane().add(positionpanel = new PositionPanel(), "North");
-
 		//Eval Panel
 		EvalPanel evalpanel;
 		this.getContentPane().add(evalpanel = new EvalPanel(), "South");
@@ -45,7 +45,6 @@ public class GraphView extends JFrame{
 		
 		//Grille
 		//Grille grille;
-		this.getContentPane().add(grille = new Grille(positionpanel), "Center");
-		
+		this.getContentPane().add(grille = new Grille(), "Center" );
 	}
 }
