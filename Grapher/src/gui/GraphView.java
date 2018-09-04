@@ -13,6 +13,7 @@ public class GraphView extends JFrame{
 	public ActionPanel actionpanel;
 	public Grille grille;
 	
+	
 	public GraphView() {
 			
 		setTitle("Grapher");
@@ -44,7 +45,7 @@ public class GraphView extends JFrame{
 		
 		//Grille
 		//Grille grille;
-		this.getContentPane().add(grille = new Grille(), "Center");
+		this.getContentPane().add(grille = new Grille(positionpanel), "Center");
 		
 	}
 }
