@@ -17,13 +17,6 @@ public class GraphView extends JFrame{
 	
 	
 	public GraphView() {
-			
-		setTitle("Grapher");
-		setPreferredSize(new Dimension(900, 900));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		pack();
-		setLocationRelativeTo(null);
-		setVisible(true);
 		
 		//Eval Panel
 		EvalPanel evalpanel;
@@ -41,10 +34,16 @@ public class GraphView extends JFrame{
 		actionpanel.afficheymax();
 		actionpanel.afficheZoomp();
 		actionpanel.afficheZoomn();
-		actionpanel.affciherefresh();
+		actionpanel.afficherefresh();
 		
 		//Grille
 		//Grille grille;
 		this.getContentPane().add(grille = new Grille(), "Center" );
+		
+		setTitle("Grapher");
+		setPreferredSize(new Dimension(800, 800));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      	pack();
+		setVisible(true);
 	}
 }

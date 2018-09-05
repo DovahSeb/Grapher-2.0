@@ -57,7 +57,7 @@ public class ActionPanel extends JPanel {
 		zoomn.setText("-");
 	}
 	
-	public void affciherefresh() {
+	public void afficherefresh() {
 		refresh.setText("Refresh");
 	}
 	
