@@ -1,11 +1,19 @@
 package eval;
 
-public class NoeudUnaire {
+public abstract class NoeudUnaire implements Noeud {
 	
-	NoeudUnaire n;
+	protected Noeud noeud;
 	
-	NoeudUnaire(NoeudUnaire noeud){
-		n = noeud;
+	public NoeudUnaire(Noeud noeud) {
+		this.noeud = noeud;
 	}
 
+	public Noeud getNoeud() {
+		return noeud;
+	}
+
+	
+	
+	
+	
 }

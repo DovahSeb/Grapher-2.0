@@ -1,39 +1,31 @@
 package eval;
 
 
-public class NoeudBinaire{
+public abstract class NoeudBinaire implements Noeud{
 	
-	int operateur;
-	NoeudBinaire gauche;
-	NoeudBinaire droit;
+	protected Noeud fg;
+	protected Noeud fd;
 	
-	NoeudBinaire(int operateur){
-		this.operateur = operateur;
-		gauche = null;
-		droit = null;
+	public NoeudBinaire(Noeud fg, Noeud fd) {
+		this.fg = fg;
+		this.fd = fd;
+	}
+
+	public Noeud getFg() {
+		return fg;
+	}
+
+	public Noeud getFd() {
+		return fd;
+	}
+
+	public void setFg(Noeud fg) {
+		this.fg = fg;
+	}
+
+	public void setFd(Noeud fd) {
+		this.fd = fd;
 	}
 	
-	public void setoperateur(int operateur) {
-		this.operateur = operateur;
-	}
 	
-	public int getoperateur() {
-		return operateur;	
-	}
-	
-	public void setgauche(NoeudBinaire gauche) {
-		this.gauche = gauche;
-	}
-	
-	public NoeudBinaire getgauche() {
-		return gauche;
-	}
-	
-	public void setdroit(NoeudBinaire droit) {
-		this.droit = droit;
-	}
-	
-	public NoeudBinaire getdroit() {
-		return droit;
-	}
 }

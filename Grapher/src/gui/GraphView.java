@@ -1,9 +1,14 @@
 package gui;
 
 import javax.swing.JFrame;
+
+import eval.Parser;
+
 import java.awt.*;
 
 public class GraphView extends JFrame{
+	
+	
 	
 	private static final long serialVersionUID = 1L;
 
@@ -14,9 +19,12 @@ public class GraphView extends JFrame{
 	public EvalPanel evalpanel;
 	public ActionPanel actionpanel;
 	public Grille grille;
+	//public Function function;
 	
 	
 	public GraphView() {
+		
+		super();
 		
 		//Eval Panel
 		EvalPanel evalpanel;
@@ -45,5 +53,15 @@ public class GraphView extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       	pack();
 		setVisible(true);
+	}
+	
+	void prepareFunction() throws Exception {
+		try {
+            //Parser parser = new Parser(EvalPanel.expression());
+            //fonction = parser.parsing();
+            grille.repaint();
+        } catch (Exception e) {
+            throw e;
+        }
 	}
 }

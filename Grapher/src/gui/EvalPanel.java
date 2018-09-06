@@ -1,6 +1,9 @@
 package gui;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
 
@@ -10,6 +13,7 @@ public class EvalPanel extends JPanel {
 	public JLabel eval;
 	public JTextField function; 
 	public JButton tracer;
+	public GraphView graphview;
 	
 	public EvalPanel(){
 		this.setBackground(Color.gray);
@@ -21,12 +25,31 @@ public class EvalPanel extends JPanel {
 		
 	}
 	
+	public void BListener() {
+		tracer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					graphview.prepareFunction();
+					
+				} catch (Exception ex) {
+					String msg = "Exception est " + ex;
+					JOptionPane.showMessageDialog(null, msg, "Message d'Erreur", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+			
+		});
+	}
+	
 	public void afficheEval() {
 		eval.setText("Entrer votre fonction f(x) : ");
 	}
 	
 	public void afficheTracer() {
 		tracer.setText("Tracer");
+	}
+	
+	public String expression() {
+		return function.getText();
 	}
 
 }
