@@ -37,16 +37,32 @@ public class ActionPanel extends JPanel {
 		xmin.setText("xmin");
 	}
 	
+	public void affichexminval() {
+		xminval.setText("-10");
+	}
+	
 	public void affichexmax() {
 		xmax.setText("xmax");
+	}
+	
+	public void affichexmaxval() {
+		xmaxval.setText("10");
 	}
 	
 	public void afficheymin() {
 		ymin.setText("ymin");
 	}
 	
+	public void afficheyminval() {
+		yminval.setText("0");
+	}
+	
 	public void afficheymax() {
 		ymax.setText("ymax");
+	}
+	
+	public void afficheymaxval() {
+		ymaxval.setText("10");
 	}
 	
 	public void afficheZoomp() {

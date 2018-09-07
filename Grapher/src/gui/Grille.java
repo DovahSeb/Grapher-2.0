@@ -35,11 +35,17 @@ public class Grille extends JPanel{
         double min=0;
 
         Graphics2D g2=(Graphics2D)g;
-        setBackground(Color.WHITE);
+        setBackground(Color.white);
         g2.translate(getWidth()/2,getHeight()/2);
         g2.scale(3.0, 3.0);
         g2.draw(new Line2D.Double(-4*100,0,4*100,0));
         g2.draw(new Line2D.Double(0,min*100,0,-max*100));
+        
+        g.setColor(Color.red);
+        g.setFont(new Font("Helvetica", Font.BOLD, 8));
+        g.drawString("x", 150, 10);
+        g2.rotate(-Math.PI/2);
+        g.drawString("y", 105, -8);
    
 	}
 }

@@ -2,7 +2,7 @@ package gui;
 
 import javax.swing.JFrame;
 
-import eval.Parser;
+//import eval.Parser;
 
 import java.awt.*;
 
@@ -37,9 +37,13 @@ public class GraphView extends JFrame{
 		ActionPanel actionpanel;
 		this.getContentPane().add(actionpanel = new ActionPanel(), "West");
 		actionpanel.affichexmin();
+		actionpanel.affichexminval();
 		actionpanel.affichexmax();
+		actionpanel.affichexmaxval();
 		actionpanel.afficheymin();
+		actionpanel.afficheyminval();
 		actionpanel.afficheymax();
+		actionpanel.afficheymaxval();
 		actionpanel.afficheZoomp();
 		actionpanel.afficheZoomn();
 		actionpanel.afficherefresh();
